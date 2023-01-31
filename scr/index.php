@@ -14,7 +14,7 @@ include_once ("CustomerHandle.php");
 
     <h1>Kundennummer Generator</h1>
 
-    <h3>Hier erhalten Sie Premiumkundennummer</h3>
+    <h3>Hier erhalten Sie Ihre Premiumkundennummer</h3>
 
     <form method="post" autocomplete="off">
 
