@@ -5,12 +5,15 @@ class CustomerHandle {
 
     public $connection;
 
+
+    // Die Verbindung wird direkt beim Instanzieren der Klasse durch den connectDb()-Methode erstellt
     public function __construct() {
         
         $this->connection = $this->connectDb();
 
     }
 
+    // Die Verbindung mit der Datenbank wird aufgebaut
     public function connectDb() {
 
         try {
@@ -28,6 +31,7 @@ class CustomerHandle {
 
     }
 
+    // Die Kundennummer wird erstellt
     public function generateId() {
 
         $array = [];
@@ -46,17 +50,20 @@ class CustomerHandle {
 
     }
 
+    // Die Kundendaten werden mit der geprüften Premiumkundennummer in die Datenbank durch ein SQL-Statement gespeichert 
     public function insert($customerId, $firstName, $lastName) {
 
         $sql = "INSERT INTO customer (customerId, firstName, lastName) VALUES (?, ?, ?)";
         $stmt= $this->connection->prepare($sql);
         $stmt->execute([$customerId, $firstName, $lastName]);
 
+        // Die Kundendaten werden ausgegeben
         echo "<br>" . " Premiumkunde: " . "<strong>" . $firstName . " " . $lastName . "</strong>";
         echo "<br>" . " Premiumkundennummer: " . "<strong>" . $customerId . "</strong>";
 
     }
 
+    // Die neue Premiumkundennummer wird auf die Einzigartigkeit geprüft
     public function checkId($customerId) {
 
         $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
