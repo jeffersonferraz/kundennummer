@@ -52,8 +52,8 @@ class CustomerHandle {
         $stmt= $this->connection->prepare($sql);
         $stmt->execute([$customerId, $firstName, $lastName]);
 
-        echo "<br>" . " Premiumkunde: " . $firstName . " " . $lastName;
-        echo "<br>" . " Premiumkundennummer: " . $customerId;
+        echo "<br>" . " Premiumkunde: " . "<strong>" . $firstName . " " . $lastName . "</strong>";
+        echo "<br>" . " Premiumkundennummer: " . "<strong>" . $customerId . "</strong>";
 
     }
 
