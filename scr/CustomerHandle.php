@@ -52,11 +52,12 @@ class CustomerHandle {
         $stmt= $this->connection->prepare($sql);
         $stmt->execute([$customerId, $firstName, $lastName]);
 
-        echo "Der Premiumkunde " . $firstName . " " . $lastName . " hat die Premiumkundennummer: " . $customerId;
+        echo "<br>" . " Premiumkunde: " . $firstName . " " . $lastName;
+        echo "<br>" . " Premiumkundennummer: " . $customerId;
 
     }
 
-    public function select($customerId) {
+    public function checkId($customerId) {
 
         $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
         $result = $stmt->fetch();
