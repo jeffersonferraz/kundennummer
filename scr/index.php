@@ -3,7 +3,7 @@ include_once ("CustomerHandle.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,18 +12,18 @@ include_once ("CustomerHandle.php");
 </head>
 <body>
 
-<h1>Kundennummer Generator</h1>
+    <h1>Kundennummer Generator</h1>
 
-<h3>Hier erhalten Sie Premiumkundennummer</h3>
+    <h3>Hier erhalten Sie Premiumkundennummer</h3>
 
-<form method="post" autocomplete="off">
+    <form method="post" autocomplete="off">
 
-    <input type="text" name="first_name" placeholder="Vorname">
-    <input type="text" name="last_name" placeholder="Nachname">
+        <input type="text" name="first_name" placeholder="Vorname">
+        <input type="text" name="last_name" placeholder="Nachname">
 
-    <input type="submit" name="submit_button" value="Generieren">
+        <input type="submit" name="submit_button" value="Generieren">
 
-</form>
+    </form>
 
     <?php
 
@@ -39,7 +39,7 @@ include_once ("CustomerHandle.php");
         while($compare == true) {
             $customerId = $customer->generateId();
             $compare = $customer->checkId($customerId);
-          }
+        }
 
         $customer->insert($customerId, $_POST["first_name"], $_POST["last_name"]);
 
