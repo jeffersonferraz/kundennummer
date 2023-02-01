@@ -35,17 +35,17 @@ class CustomerHandle {
     // Die Kundennummer wird erstellt
     public function generateId() {
 
-        $array = [];
-        $endDigits = 0;
+        $midNumbers = [];
+        $endNumbers = 0;
 
         for ($index=0; $index < 7; $index++) {
 
-            array_push($array, rand(1,9));
+            array_push($midNumbers, rand(1,9));
 
-            $endDigits = $endDigits + $array[$index];
+            $endNumbers = $endNumbers + $midNumbers[$index];
         }
 
-        $customerId = "KD" . implode("", $array) . $endDigits;
+        $customerId = "KD" . implode("", $midNumbers) . $endNumbers;
 
         return $customerId;
 
