@@ -35,11 +35,11 @@ include_once ("CustomerHandle.php");
 
         $customerId = $customer->generateId();
         
-        $compare = $customer->checkId($customerId);
+        $compareId = $customer->checkId($customerId);
 
-        while(!empty($compare)) {
+        while(!empty($compareId)) {
             $customerId = $customer->generateId();
-            $compare = $customer->checkId($customerId);
+            $compareId = $customer->checkId($customerId);
         }
 
         $customer->insert($customerId, $_POST["first_name"], $_POST["last_name"]);

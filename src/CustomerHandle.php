@@ -42,7 +42,7 @@ class CustomerHandle {
 
             array_push($midNumbers, rand(1,9));
 
-            $endNumbers = $endNumbers + $midNumbers[$index];
+            $endNumbers += $midNumbers[$index];
         }
 
         $customerId = "KD" . implode("", $midNumbers) . $endNumbers;
