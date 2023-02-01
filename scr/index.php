@@ -1,4 +1,5 @@
 <?php
+// CustomerHandle - Klasse einbinden
 include_once ("CustomerHandle.php");
 ?>
 

@@ -1,4 +1,5 @@
 <?php
+// D config einbinden
 include_once ("config.inc.php");
 
 class CustomerHandle {
@@ -6,7 +7,7 @@ class CustomerHandle {
     public $connection;
 
 
-    // Die Verbindung wird direkt beim Instanzieren der Klasse durch den connectDb()-Methode erstellt
+    // Die Verbindung wird direkt beim Instanzieren der Klasse mithilfe der connectDb()-Methode erstellt
     public function __construct() {
         
         $this->connection = $this->connectDb();
