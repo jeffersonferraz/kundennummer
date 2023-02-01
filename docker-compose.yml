@@ -19,6 +19,6 @@ services:
     ports: 
         - "80:80"
     volumes:
-        - ./scr:/var/www/html
+        - ./src:/var/www/html
     links:
         - database
