@@ -36,18 +36,18 @@ class CustomerHandle {
     public function generateId() {
 
         $array = [];
-        $endstellen = 0;
+        $endDigits = 0;
 
-        for ($i=0; $i < 7; $i++) {
+        for ($index=0; $index < 7; $index++) {
 
             array_push($array, rand(1,9));
 
-            $endstellen += $array[$i];
+            $endDigits += $array[$index];
         }
 
-        $kdnummer = "KD" . implode("", $array) . $endstellen;
+        $customerId = "KD" . implode("", $array) . $endDigits;
 
-        return $kdnummer;
+        return $customerId;
 
     }
 
