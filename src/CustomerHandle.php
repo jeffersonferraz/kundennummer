@@ -51,6 +51,16 @@ class CustomerHandle {
 
     }
 
+    // Die neue Premiumkundennummer wird auf die Einzigartigkeit geprüft
+    public function checkId($customerId) {
+
+    $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
+    $result = $stmt->fetch();
+
+    return $result;
+
+    }
+
     // Die Kundendaten werden mit der geprüften Premiumkundennummer in die Datenbank durch ein SQL-Statement gespeichert 
     public function insert($customerId, $firstName, $lastName) {
 
@@ -64,13 +74,4 @@ class CustomerHandle {
 
     }
 
-    // Die neue Premiumkundennummer wird auf die Einzigartigkeit geprüft
-    public function checkId($customerId) {
-
-        $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
-        $result = $stmt->fetch();
-
-        return $result;
-    }
-
-    }
+}
