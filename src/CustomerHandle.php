@@ -54,10 +54,10 @@ class CustomerHandle {
     // Die neue Premiumkundennummer wird auf die Einzigartigkeit geprüft
     public function checkId($customerId) {
 
-    $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
-    $result = $stmt->fetch();
+        $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
+        $result = $stmt->fetch();
 
-    return $result;
+        return $result;
 
     }
 
