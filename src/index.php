@@ -37,7 +37,7 @@ include_once ("CustomerHandle.php");
         
         $compare = $customer->checkId($customerId);
 
-        while($compare == true) {
+        while(!empty($compare)) {
             $customerId = $customer->generateId();
             $compare = $customer->checkId($customerId);
         }

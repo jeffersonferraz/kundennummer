@@ -42,7 +42,7 @@ class CustomerHandle {
 
             array_push($array, rand(1,9));
 
-            $endDigits += $array[$index];
+            $endDigits = $endDigits + $array[$index];
         }
 
         $customerId = "KD" . implode("", $array) . $endDigits;
@@ -69,14 +69,8 @@ class CustomerHandle {
 
         $stmt = $this->connection->query("SELECT customerId FROM customer WHERE customerId = '$customerId'");
         $result = $stmt->fetch();
-        
-        if (!empty($result)) {
-            $idExist = true;
-        } else {
-            $idExist = false;
-        }
 
-        return $idExist;
+        return $result;
     }
 
     }
