@@ -19,8 +19,8 @@ include_once ("CustomerHandle.php");
 
     <form method="post" autocomplete="off">
 
-        <input type="text" name="first_name" placeholder="Vorname">
-        <input type="text" name="last_name" placeholder="Nachname">
+        <input type="text" name="first_name" placeholder="Vorname" required>
+        <input type="text" name="last_name" placeholder="Nachname" required>
 
         <input type="submit" name="submit_button" value="Generieren">
 
