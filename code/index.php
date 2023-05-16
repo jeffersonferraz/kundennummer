@@ -1,5 +1,11 @@
 <?php
-// CustomerHandle - Klasse einbinden
+// -*- coding: utf-8 -*-
+// Anwendung:    Kundennummer-Generator
+// Autor:        Ferraz / Pophof
+// Datum:        22.02.2023
+// Version:      1.0
+
+// CustomerHandle-Klasse einbinden
 include_once ("CustomerHandle.php");
 ?>
 
@@ -27,21 +33,25 @@ include_once ("CustomerHandle.php");
     </form>
 
     <?php
+        // if-Statement wird aktiviert beim Anklicken des Buttons
+        if (isset($_POST['submit_button'])) {
 
-        if (isset($_POST['submit_button'])) { 
-
+        // Ein Objekt wird von der Klasse CustomerHandle instanziert
         $customer = new CustomerHandle;
-        $customer->connectDb();
 
+        // Die Kundennummer wird durch generateId()-Methode erstellt
         $customerId = $customer->generateId();
         
+        // Die Kundennummer wird durch checkId()-Methode auf die Einzigartigkeit geprüft
         $compareId = $customer->checkId($customerId);
 
+        // Solange die Kundennummer nicht einzig ist, wird eine neue generiert
         while(!empty($compareId)) {
             $customerId = $customer->generateId();
             $compareId = $customer->checkId($customerId);
         }
 
+        // Die Kundendaten werden durch insert()-Methode in die DB gespeichert
         $customer->insert($customerId, $_POST["first_name"], $_POST["last_name"]);
 
         }

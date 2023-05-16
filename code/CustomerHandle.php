@@ -35,17 +35,19 @@ class CustomerHandle {
     // Die Kundennummer wird erstellt
     public function generateId() {
 
-        $midNumbers = [];
-        $endNumbers = 0;
+        $midNumbers = []; // Array für die Stellen 3 - 10 
+        $lastNumbers = 0; // Integer für die Summa der 2 Endstellen
 
         for ($index=0; $index < 7; $index++) {
 
+            // Die Methode array_push() speichert bei jedem Durchlauf einen neuen Wert in der Array $midNumbers
             array_push($midNumbers, rand(1,9));
-
-            $endNumbers += $midNumbers[$index];
+            
+            // Bei jedem Durchlauf wird ein Element der $midNumbers Array mit der $lastNumbers Variable summiert und gespeichert
+            $lastNumbers += $midNumbers[$index];
         }
 
-        $customerId = "KD" . implode("", $midNumbers) . $endNumbers;
+        $customerId = "KD" . implode("", $midNumbers) . $lastNumbers; 
 
         return $customerId;
 
