@@ -1,11 +1,11 @@
 <?php
-//=========================================
+//========================================================================
 //  coding:       utf-8
 //  Anwendung:    Kundennummer-Generator
 //  Autor:        Ferraz / Pophof
 //  Datum:        22.02.2023
 //  Version:      1.0
-//=========================================
+//========================================================================
 
 // CustomerHandle-Klasse einbinden
 include_once ("CustomerHandle.php");
