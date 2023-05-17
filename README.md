@@ -6,8 +6,8 @@
 
 ### Projektablaufplan
 
-<br><img src="/diagramme/PAP.png"  width="80%">
+<img src="/diagramme/PAP.png"  width="80%">
 
 ### Struktogramm
 
-<br><img src="/diagramme/Struktogramm.png"  width="80%">
+<img src="/diagramme/Struktogramm.png"  width="80%">
