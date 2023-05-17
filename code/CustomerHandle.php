@@ -6,7 +6,6 @@ class CustomerHandle {
 
     public $connection;
 
-
     // Die Datenbankverbindung wird direkt beim Instanzieren der Klasse mithilfe der connectDb()-Methode erstellt
     public function __construct() {
         
