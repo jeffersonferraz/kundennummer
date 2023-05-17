@@ -4,7 +4,7 @@
 
 ## ***Projektablaufplan***
 <img src="/diagramme/PAP.png"  width="80%">
-<br><br><br>
+<br><br>
 
 ## ***Struktogramm***
 <img src="/diagramme/Struktogramm.png"  width="80%">
