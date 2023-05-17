@@ -1,13 +1,11 @@
 # Kundennummer-Generator
 
-**Anwendung [hier testen!](https://kundennummer.000webhostapp.com/)**
+» Anwendung [hier testen!](https://kundennummer.000webhostapp.com/)
+<br><br><br>
 
-# Diagramme
-
-### Projektablaufplan
-
+## ***Projektablaufplan***
 <img src="/diagramme/PAP.png"  width="80%">
+<br>
 
-### Struktogramm
-
+## ***Struktogramm***
 <img src="/diagramme/Struktogramm.png"  width="80%">
