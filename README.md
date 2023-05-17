@@ -2,9 +2,6 @@
 
 **Anwendung [hier testen!](https://kundennummer.000webhostapp.com/)**
 
-# Diagramme
-
-
 ## ***Projektablaufplan***
 
 <img src="/diagramme/PAP.png"  width="80%">
