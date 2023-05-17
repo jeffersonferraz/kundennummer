@@ -4,10 +4,10 @@
 
 # Diagramme
 
-<br>
+
 ### ***Projektablaufplan***
 
-<img src="/diagramme/PAP.png"  width="80%"><br>
+<img src="/diagramme/PAP.png"  width="80%"><br><br>
 
 ### ***Struktogramm***
 
