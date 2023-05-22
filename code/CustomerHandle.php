@@ -70,8 +70,8 @@ class CustomerHandle {
         $stmt->execute([$customerId, $firstName, $lastName]);
 
         // Die Kundendaten werden ausgegeben
-        echo "<br>" . " Premiumkunde: " . "<strong>" . $firstName . " " . $lastName . "</strong>";
-        echo "<br>" . " Premiumkundennummer: " . "<strong>" . $customerId . "</strong>";
+        echo "<br>Premiumkunde: <strong>{$firstName} {$lastName}</strong>";
+        echo "<br>Premiumkundennummer: <strong>{$customerId}</strong>";
 
     }
 
