@@ -45,6 +45,10 @@ class CustomerHandle {
             // Bei jedem Durchlauf wird ein Element der $midNumbers Array mit der $lastNumbers Variable summiert und gespeichert
             $lastNumbers += $midNumbers[$index];
         }
+        // Das if-Statement prüft, ob die Quersumme zweistellig ist | Falls nicht: die Zahl 0 wird davor gesetzt
+        if ($lastNumbers < 10) {
+            $lastNumbers = 0 . $lastNumbers;
+        }
 
         $customerId = "KD" . implode("", $midNumbers) . $lastNumbers; 
 
