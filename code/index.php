@@ -46,7 +46,7 @@
         // Die Kundennummer wird durch checkId()-Methode auf die Einzigartigkeit geprüft
         $compareId = $customer->checkId($customerId);
 
-        // Solange die Kundennummer nicht einzig ist, wird eine neue generiert
+        // Solange die Kundennummer nicht einzigartig ist, wird eine neue generiert
         while(!empty($compareId)) {
             $customerId = $customer->generateId();
             $compareId = $customer->checkId($customerId);
